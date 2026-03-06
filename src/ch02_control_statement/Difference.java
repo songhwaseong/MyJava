@@ -21,16 +21,5 @@ public class Difference {
         diff = sumA - sumB;
         System.out.printf("차이 : %d" , diff ); // 459
 
-        Map<String, Integer> a = new HashMap<>();
-
-        a.put("a1",1111);
-        a.put("a2",1111);
-        a.put("a3",1111);
-
-        System.out.println(a.toString());
-
-        a.replace("a3", 4444);
-        System.out.println(a.toString());
-
     }
 }
