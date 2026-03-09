@@ -5,6 +5,7 @@ import java.util.stream.Collectors;
 
 public class MyArr01 {
     static void main(String[] args) {
+
         int x= 3;
         int y= 5;
 
