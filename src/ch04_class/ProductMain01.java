@@ -6,9 +6,7 @@ import java.time.format.DateTimeFormatter;
 public class ProductMain01 {
     static void main(String[] args) {
 
-        LocalDate now = LocalDate.now();         // 포맷 정의
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd");
-        String formatedNow = now.format(formatter);
+        String formatedNow = LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy/MM/dd"));
 
         Product01 shin = new Product01("신라면", 1500, formatedNow );
         Product01 blackbean = new Product01("짜파게티", 1350, formatedNow );

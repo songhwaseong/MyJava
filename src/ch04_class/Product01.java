@@ -3,8 +3,14 @@ package ch04_class;
 public class Product01 {
     private String name;
     private String inputDate;
-    private int price;
+    private int price = 500;
 
+    public Product01(){}
+
+    public Product01(String name, String inputDate) {
+        this.name = name;
+        this.inputDate = inputDate;
+    }
     public Product01(String name, int price, String inputDate) {
         this.name = name;
         this.inputDate = inputDate;

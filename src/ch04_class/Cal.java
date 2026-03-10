@@ -1,10 +1,16 @@
 package ch04_class;
 
+import java.util.Scanner;
+
 public class Cal {
     private String operator;
     private int firstNum;
     private int twoNum;
     private double result;
+
+    public Cal(){
+        inputData();
+    }
 
     public String getOperator() {
         return operator;
@@ -48,11 +54,26 @@ public class Cal {
         return result;
     }
 
-    public String to_String(){
+    @Override
+    public String toString() {
         return "결과 : %d %s %d = %.1f \n";
     }
 
     public void println(){
-        System.out.printf(to_String(), firstNum,operator,twoNum,calculate());
+        println(toString());
+    }
+
+    private void println(String str){
+        System.out.printf(str, firstNum,operator,twoNum,calculate());
+    }
+
+    public void inputData(){
+        Scanner s = new Scanner(System.in);
+        System.out.print("첫번째 숫자를 넣어주세요 =====>  ");
+        this.setFirstNum(Integer.parseInt(s.nextLine()));
+        System.out.print("연산자를 넣어주세요(+,-,*,/) =====>  ");
+        this.setOperator(s.nextLine());
+        System.out.print("두번째 숫자를 넣어주세요 ======> ");
+        this.setTwoNum(Integer.parseInt(s.nextLine()));
     }
 }
